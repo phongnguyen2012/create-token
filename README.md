@@ -1,7 +1,7 @@
 <sub>
-## create-token
-Fungible Token 
-Example implementation of a Fungible Token contract which uses near-contract-standards and simulation tests. This is a contract-only example.
+## Create-token
+  Fungible Token 
+  Example implementation of a Fungible Token contract which uses near-contract-standards and simulation tests. This is a contract-only example.
 
 ### 1. Prerequisites Install Rust
 
