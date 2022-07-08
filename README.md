@@ -1,12 +1,13 @@
-# create-token
+<sub>
+## create-token
 Fungible Token 
 Example implementation of a Fungible Token contract which uses near-contract-standards and simulation tests. This is a contract-only example.
 
-1. Prerequisites Install Rust
+### 1. Prerequisites Install Rust
 
 Building ./build.sh
 
-2. Using this contract : Deloy contract
+### 2. Using this contract : Deloy contract
 near deploy --wasmFile out/create-token.wasm --accountId $ID
 
 Fungiable Token contract should be initialized before usage. You can read more about metadata at 'nomicon.io'. Modify the parameters and create a token:
@@ -15,7 +16,7 @@ near call $ID new '{"owner_id": "'$ID'", "total_supply": "1000000000000000", "me
 
 Get metadata: near view $ID ft_metadata
 
-3. Transfer Example
+### 3. Transfer Example
 near create-account teo.$ID --masterAccount $ID --initialBalance 5
 
 Add storage deposit for teo's account:
@@ -27,5 +28,6 @@ Transfer tokens to teo from the contract that minted these fungible tokens, exac
 
 near call $ID ft_transfer '{"receiver_id": "'teo.$ID'", "amount": "1"}' --accountId $ID --amount 0.000000000000000000000001
 
-4. Test
+### 4. Test
 cargo test
+</sub>
